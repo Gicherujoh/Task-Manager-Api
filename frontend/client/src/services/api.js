@@ -2,9 +2,12 @@ import axios from "axios";
 
 //const url = import.meta.env.VITE_BACKEND_URL;
 
-const API = axios.create({
-  baseURL:"https://task-manager-api-xbym.onrender.com/api",
-});
+const baseURL =
+    import.meta.env.MODE === "development"
+    ? import.meta.env.VITE_BACKEND_LOCAL + "/api"
+    : import.meta.env.VITE_BACKEND_URL;
+
+const API = axios.create({ baseURL });
 
 export const getTasks = (status) =>
   API.get(`/tasks${status ? `?status=${status}` : ""}`);

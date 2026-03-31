@@ -9,9 +9,9 @@ dotenv.config();
 
 const app = express();
 
-const URL = process.env.FRONTEND_URL
+//const URL = process.env.FRONTEND_URL
 
-app.use(cors({ origin:URL}));
+app.use(cors({ origin:"https://task-manager-api-uwgu.vercel.app"}));
 app.use(express.json());
 
 app.use("/api", taskRoutes);

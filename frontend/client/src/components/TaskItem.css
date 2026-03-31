@@ -1,0 +1,125 @@
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Table */
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* Header */
+.task-table th {
+  background: #f9fafb;
+  text-align: left;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #374151;
+}
+
+/* Rows */
+.task-table td {
+  padding: 12px;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+/* Hover effect */
+.task-table tbody tr:hover {
+  background: #f9f9f9;
+}
+
+/* BADGES */
+.badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+/* Priority Colors */
+.priority.low {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.priority.medium {
+  background: #fef9c3;
+  color: #a16207;
+}
+
+.priority.high {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* Status Colors */
+.status.pending {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.status.in_progress {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.status.done {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+/* Buttons */
+.actions button {
+  margin-right: 8px;
+}
+
+.btn-update {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btn-update:hover {
+  background: #1d4ed8;
+}
+
+.btn-delete {
+  background: #dc2626;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btn-delete:hover {
+  background: #b91c1c;
+}
+/* Empty state */
+.empty {
+  text-align: center;
+  margin-top: 20px;
+  color: #6b7280;
+  font-size: 14px;
+}

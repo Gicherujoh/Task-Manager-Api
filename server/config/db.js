@@ -6,11 +6,14 @@ dotenv.config();
 const sequelize = new Sequelize(process.env.DATABASE_URL, {
   dialect: "mysql",
   dialectOptions: {
-    ssl: {
+  
+     ssl: {
       require: true,
       rejectUnauthorized: false,
     },
+
   },
+
 });
 
 export default sequelize;

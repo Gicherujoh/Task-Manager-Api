@@ -1,9 +1,9 @@
 import axios from "axios";
 
-const baseURL =
-    import.meta.env.MODE === "development"
-    ? import.meta.env.VITE_BACKEND_LOCAL + "/api"
-    : import.meta.env.VITE_BACKEND_URL;
+// frontend/api.js
+const baseURL = import.meta.env.MODE === "development"
+    ? `${import.meta.env.VITE_BACKEND_LOCAL}/api`
+    : import.meta.env.VITE_BACKEND_URL; // This already has /api
 
     console.log(import.meta.env.VITE_BACKEND_URL)
 const API = axios.create({ baseURL });

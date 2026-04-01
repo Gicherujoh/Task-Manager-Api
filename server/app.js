@@ -13,7 +13,7 @@ const app = express();
 const allowedOrigins = [
   process.env.FRONTEND_LOCAL_URL,
   process.env.FRONTEND_URL
-].filter(Boolean); // removes undefined/null
+]// removes undefined/null
 
 app.use(cors({
   origin: allowedOrigins, // Express-cors handles arrays automatically

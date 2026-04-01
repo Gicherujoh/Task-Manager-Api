@@ -16,12 +16,6 @@ const TaskItem = ({ task, onUpdate, onDelete ,}) => {
   {/* Show Edit + Move if NOT done */}
   {task.status !== "done" && (
     <>
-    <button
-      className="btn-delete"
-      onClick={() => onDelete(task.id)}
-    >
-      Delete
-    </button>
       <button
         className="btn-update"
         onClick={() =>

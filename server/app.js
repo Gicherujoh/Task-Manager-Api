@@ -11,19 +11,13 @@ const app = express();
 
 //const URL = process.env.FRONTEND_URL
 const allowedOrigins = [
-  process.env.FRONTEND_LOCAL_URL, // local frontend
-  process.env.FRONTEND_URL  // deployed frontend
-];
+  process.env.FRONTEND_LOCAL_URL,
+  process.env.FRONTEND_URL
+].filter(Boolean); // removes undefined/null
 
 app.use(cors({
-  origin: function(origin, callback) {
-    if (!origin) return callback(null, true); 
-    if (allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  }
+  origin: allowedOrigins, // Express-cors handles arrays automatically
+  credentials: true
 }));
 app.use(express.json());
 
